@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, 
+     user-scalable=0'>
+    <link rel="shortcut icon" href="./icon/favicon.png" type="image/x-icon">
+    <title>Eds</title>
+    <link href="control.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <video class="back-video" autoplay muted loop>
+        <source src="./video (2).mp4" type="video/mp4">
+    </video>
+    <div class="header">
+        <h1 id="oh">(ﾉ◕ヮ◕)ﾉ</h1>
+
+    </div>
+    <div class="toggleContainer">
+        <input class="toggle" type="checkbox" onclick="videoBackground()">
+    </div>
+
+    <canvas></canvas>
+    <div class="elements">
+        <p class="instructions">
+            Use your keyboard to move
+        </p>
+        <p id="play" style="color: orangered;">Play!</p>
+
+    </div>
+
+    <div class="touch-controls">
+        <div class="left-arrow"></div>
+        <div class="up-arrow">
+            <p id="jump">JUMP</p>
+        </div>
+        <div class="right-arrow"></div>
+    </div>
+
+
+
+
+    <script src="./control.js" type="text/javascript"></script>
+    <script src="./videoAndSound.js" type="text/javascript"></script>
+
+</body>
+
+</html>

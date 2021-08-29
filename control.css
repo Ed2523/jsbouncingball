@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+* {
+
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  
+  }
+
+  
+  html, body {
+  
+    height:100%;
+    width:100%;
+  
+  }
+  
+  body {
+    background: linear-gradient(90deg,  rgba(104, 92, 212, 0.966) 0%,
+    rgb(133, 36, 197) 100%);
+    color:#ffffff;
+    display:grid;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .back-video{
+    object-fit: cover;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+   display: none;
+  }
+  .back-video.activated{
+    object-fit: cover;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+  }
+   p {
+     
+      color: white;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-family: 'Orbitron', sans-serif;
+      text-decoration: none;
+      display:flex ;
+      flex-direction: column;
+      
+    
+  }
+  #play{
+      
+    padding-left: 200px;
+    padding-top: 10px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+  
+}
+.elements{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 5rem;
+}
+.elements:hover  #play:hover {
+  color: yellow;
+}
+
+.header{
+    color: white;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-family: 'Orbitron', sans-serif;   
+}
+#oh{
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+  canvas {
+  
+    background-color:#ffffff;
+    box-shadow: 0px 10px 10px rgb(212, 62, 226);
+  
+  
+  }
+   /*-From here is toogle button css section-*/
+.toggleContainer{
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+/*-this is the white round container-*/
+.toggle[type="checkbox"]{
+  position: relative;
+  width: 2.7rem;
+  height: 1.5rem;
+  appearance:none;
+  background-color: rgb(255, 255, 255);
+  outline:none;
+  border-radius: 2rem;
+  transition: 0.5s;  
+  margin: 0 2rem 0 0; 
+  cursor: pointer;
+}
+/*-same white container but when checked changes the backgroundcolor-*/
+.toggle:checked[type="checkbox"]{
+background-color:rgb(90, 86, 105);
+}
+
+/*-this is the little circle inside the container-*/
+.toggle[type="checkbox"]:before{
+  content: '';
+  position: absolute;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border-radius:2rem;
+  top: 0;
+  left: 0;
+  background-color: rgb(66, 0, 128);
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+/*-Same circle,but when is checked changes its position-*/
+.toggle:checked[type="checkbox"]:before{
+  left: 1.1rem;
+  transition:.5s;
+  background-color:rgb(64, 55, 97);
+}
+.touch-controls{
+display: none;
+}
+
+@media screen and (max-width: 900px){
+  .toggleContainer{
+    position: absolute;
+    top: 2rem;
+    right: 0rem;
+  }
+  .header{
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .elements{
+    display: none;
+  }
+  .touch-controls{
+    min-height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    mix-blend-mode: overlay;
+ }
+  .left-arrow{
+    height: 6rem;
+    width: 15%;
+    border-width:3rem;
+    border-style: solid;
+    border-left-color: transparent;
+    border-right-color: rgba(185, 168, 168, 0.678);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  
+  }
+  .up-arrow{
+    height: 6rem;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 1.5rem;
+    mix-blend-mode: overlay;
+    color: #fff;
+    font-weight: bolder;
+   
+   }
+   .up-arrow p{
+     padding: 0;
+   }
+
+   .right-arrow{
+    height: 6rem;
+    width: 15%;
+    height: 6rem;
+    width: 20%;
+    border-width:3rem;
+    border-style: solid;
+    border-left-color: rgba(185, 168, 168, 0.678);
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;}
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+  }
+  canvas{
+    width: 90vw;
+    min-height: 25vh;
+    z-index: 1;
+    
+  }
+  .header{
+    z-index: 1;
+  }
+  .back-video.activated{
+    z-index: 0;
+  }
+  .left-arrow:active{
+    border-right-color: #fff;
+  }
+  .up-arrow:active{
+    background-color: white;
+  }
+  .right-arrow:active{
+    border-left-color: #fff;
+  }
+}
+
